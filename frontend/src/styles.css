@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+.modal-backdrop{
+  z-index: 1050 !important;
+}
+
+
+[type="search"]{
+  outline-offset: 0;
+  -webkit-appearance: none;
+  appearance: auto;
+
+}
+
+.dataTables_length{
+  position: absolute;
+}

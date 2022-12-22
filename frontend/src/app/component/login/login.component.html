@@ -1,0 +1,55 @@
+<!--<div class="header d-none">-->
+
+<!--  <ul class="nav nav-tabs user-menu">-->
+
+<!--    <li class="nav-item">-->
+<!--      <a href="#" id="dark-mode-toggle" class="dark-mode-toggle">-->
+<!--        <i class="feather-sun light-mode"></i><i class="feather-moon dark-mode"></i>-->
+<!--      </a>-->
+<!--    </li>-->
+
+<!--  </ul>-->
+
+<!--</div>-->
+<div class="row">
+
+  <div class="col-md-6 login-bg">
+    <div class="login-banner"></div>
+  </div>
+
+  <div class="col-md-6 login-wrap-bg">
+
+    <div class="login-wrapper">
+      <div class="loginbox">
+        <div class="img-logo">
+          <img src="assets/images/gocheetalogo12.png" class="img-fluid" alt="Logo">
+        </div>
+        <h3>Login</h3>
+        <p class="account-subtitle">login to your account to continue</p>
+        <form (ngSubmit)="onSubmit()">
+          <div class="form-group form-focus">
+            <input type="email" class="form-control floating" name="email" [(ngModel)]="form.username">
+            <label class="focus-label">Enter Email</label>
+          </div>
+          <div class="form-group form-focus">
+            <input type="password" class="form-control floating" name="password" [(ngModel)]="form.password">
+            <label class="focus-label">Enter Password</label>
+          </div>
+          <div class="form-group">
+            <div class="row">
+
+              <div class="col-6 offset-6 text-end">
+                <a class="forgot-link" href="forgot-password.html">Forgot Password ?</a>
+              </div>
+            </div>
+          </div>
+          <div class="d-grid">
+            <button class="btn btn-primary btn-block" type="submit" >Login</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>

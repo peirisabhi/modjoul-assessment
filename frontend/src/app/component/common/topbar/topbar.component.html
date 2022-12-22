@@ -1,0 +1,102 @@
+<div class="header">
+
+  <!-- Logo -->
+  <div class="header-left">
+    <a href="index.html" class="logo">
+      <img src="assets/images/gocheetalogo12.png" alt="Logo">
+    </a>
+    <a href="index.html" class="logo logo-small">
+      <img src="assets/images/gocheetalogo12.png" alt="Logo" width="30" height="30">
+    </a>
+  </div>
+  <!-- /Logo -->
+
+  <a href="javascript:void(0);" id="toggle_btn">
+    <i class="fe fe-text-align-left"></i>
+  </a>
+
+  <div class="top-nav-search">
+    <form>
+      <input type="text" class="form-control" placeholder="Search here">
+      <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+
+  <!-- Mobile Menu Toggle -->
+  <a class="mobile_btn" id="mobile_btn">
+    <i class="fa fa-bars"></i>
+  </a>
+  <!-- /Mobile Menu Toggle -->
+
+  <!-- Header Right Menu -->
+  <ul class="nav user-menu">
+
+    <!-- Notifications -->
+    <li class="nav-item dropdown noti-dropdown">
+      <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+        <i class="fe fe-bell"></i> <span class="badge badge-pill">0</span>
+      </a>
+
+    </li>
+    <!-- /Notifications -->
+
+    <!-- User Menu -->
+    <li class="nav-item dropdown has-arrow">
+      <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+        <span class="user-img"><img class="rounded-circle" src="assets/img/user/user.png" width="31" alt="Ryan Taylor"></span>
+      </a>
+      <div class="dropdown-menu">
+        <div class="user-header">
+          <div class="avatar avatar-sm">
+            <img src="assets/img/user/user.png" alt="User Image" class="avatar-img rounded-circle">
+          </div>
+          <div class="user-text">
+            <h6>Ryan Taylor</h6>
+            <p class="text-muted mb-0">Administrator</p>
+          </div>
+        </div>
+        <a class="dropdown-item" (click)="open(addmodal, null)">Change Password</a>
+        <a class="dropdown-item" (click)="logOut()">Logout</a>
+      </div>
+    </li>
+    <!-- /User Menu -->
+
+  </ul>
+  <!-- /Header Right Menu -->
+
+</div>
+
+
+<!-- Add Modal -->
+<ng-template #addmodal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Change Password</h4>
+    <button type="button" class="close" data-dismiss="modal" (click)="close(addmodal)" aria-label="Close">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+
+  <div class="modal-body">
+    <form (ngSubmit)="changePassword()">
+      <div class="row form-row">
+        <div class="col-12 col-sm-12">
+          <div class="form-group">
+            <label>Current Password</label>
+            <input type="password" name="title" [(ngModel)]="currentPassword" class="form-control">
+          </div>
+        </div>
+        <div class="col-12 col-sm-12">
+          <div class="form-group">
+            <label>New Password</label>
+            <input type="password" name="description" [(ngModel)]="newPassword" class="form-control">
+          </div>
+        </div>
+
+
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Change Password</button>
+    </form>
+  </div>
+
+</ng-template>
+<!-- /ADD Modal -->
